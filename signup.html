@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow Salon</title>
+  <link rel="stylesheet" href="../css/blogs.css">
+  <link rel="stylesheet" href="../css/Sdetail.css">
+  <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+
+    
+    <div class="logo">
+      Glow <span>Salon</span>
+    </div>
+
+    <div class="theme-toggle" id="themeToggle">
+      🌙
+    </div>
+</nav>
+
+<section class="auth-section">
+  <canvas id="particle-canvas"></canvas>
+  <div class="auth-container">
+
+    
+    <form class="form login-form active">
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" required>
+      </div>
+      <div class="input-group password-group">
+        <label for="loginPass">Password</label>
+        <input type="password" id="loginPass" required>
+        <span class="toggle-password">👁</span>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <button type="button" class="toggle-btn" id="showSignup">Go to Sign Up</button>
+    </form>
+
+    
+    <form class="form signup-form">
+      <h2>Sign Up</h2>
+      <div class="input-group">
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" required>
+      </div>
+      <div class="input-group password-group">
+        <label for="signupPass">Password</label>
+        <input type="password" id="signupPass" required>
+        <span class="toggle-password">👁</span>
+      </div>
+      <div class="input-group password-group">
+        <label for="confirmPass">Confirm Password</label>
+        <input type="password" id="confirmPass" required>
+        <span class="toggle-password">👁</span>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+      <button type="button" class="toggle-btn" id="showLogin">Go to Login</button>
+    </form>
+
+  </div>
+</section>
+
+<script src="../js/blogs.js"></script>
+<script src="../js/signup.js"></script>

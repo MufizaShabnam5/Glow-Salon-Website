@@ -1,0 +1,1498 @@
+/* ===================================
+   RESET & BASE STYLING
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ===================================
+   VARIABLES & THEMES
+=================================== */
+:root {
+  --accent-light: #ff85c1;
+  --accent-dark: #bb86fc;
+  --section-light1: #fff0f6;
+  --section-light2: #f3e8ff;
+  --section-light3: #fde2ff;
+  --section-dark1: #1a1028;
+  --section-dark2: #141b3a;
+  --section-dark3: #24143d;
+}
+
+body.light {
+  color: #111;
+  background: linear-gradient(135deg,#ffe6f0,#f3e5ff);
+}
+
+body.dark {
+  color: #fff;
+  background: linear-gradient(135deg,#1a1028,#0f1a3a);
+}
+
+/* ===================================
+   NAVBAR (KEPT SAFE)
+=================================== */
+.navbar {
+  padding: 18px 50px;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logo span {
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theme-toggle {
+  padding: 8px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: var(--accent-light);
+  color: #fff;
+}
+
+/* ===================================
+   HERO SECTION
+=================================== */
+.about-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.about-hero h1 {
+  font-size: 3rem;
+  color: #c2185b;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #6a4b7c;
+}
+
+/* ===================================
+   ABOUT SPLIT SECTION
+=================================== */
+.about-split {
+  display: flex;
+  gap: 40px;
+  padding: 80px 60px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg,var(--section-light1),var(--section-light2));
+}
+.about-split .dark{
+
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #c2185b;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: #6a4b7c;
+}
+
+/* ===================================
+   EXPERTS SECTION
+=================================== */
+.experts {
+  padding: 80px 60px;
+  background: linear-gradient(135deg,var(--section-light2),var(--section-light3)/);
+}
+
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+}
+
+.expert-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  transition: all 0.6s ease;
+}
+
+.expert-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.expert-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+.expert-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.08);
+}
+
+.expert-info {
+  padding: 20px;
+}
+
+.expert-info h3 {
+  margin-bottom: 5px;
+  color: #7b1fa2;
+}
+
+.expert-info span {
+  font-size: 0.9rem;
+  color: #6a4b7c;
+}
+
+.expert-info p {
+  margin-top: 10px;
+  color: #6a4b7c;
+}
+
+/* ===================================
+   WHY CHOOSE SECTION
+=================================== */
+.why {
+  padding: 80px 60px;
+  background: linear-gradient(135deg,var(--section-light3),var(--section-light1)/);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 25px;
+}
+
+.why-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding-bottom: 20px;
+  transition: all 0.6s ease;
+}
+
+.why-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.why-card h3 {
+  margin-top: 12px;
+  color: #7b1fa2;
+}
+
+/* ===================================
+   AWARDS SECTION
+=================================== */
+.awards {
+  padding: 80px 60px;
+  background: linear-gradient(135deg,var(--section-light1),var(--section-light2)/);
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 30px;
+}
+
+.award-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  transition: all 0.6s ease;
+  
+}
+
+.award-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.award-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+.award-card h3 {
+  margin-top: 12px;
+  color: #7b1fa2;
+}
+
+/* ===================================
+   WHATSAPP BUTTON
+=================================== */
+.whatsapp-section {
+  padding: 60px;
+  background: linear-gradient(135deg,#c2185b,#7b1fa2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg,#25D366,#1ebe5d);
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.join-btn:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* ===================================
+   FADE & SCROLL ANIMATIONS
+=================================== */
+.fade-left, .fade-right, .fade-top, .fade-bottom {
+  opacity: 0;
+}
+
+.show.fade-left { animation: fadeLeft 1s forwards; }
+.show.fade-right { animation: fadeRight 1s forwards; }
+.show.fade-top { animation: fadeTop 1s forwards; }
+.show.fade-bottom { animation: fadeBottom 1s forwards; }
+
+@keyframes fadeLeft { from {opacity:0; transform:translateX(-40px);} to {opacity:1; transform:translateX(0);} }
+@keyframes fadeRight { from {opacity:0; transform:translateX(40px);} to {opacity:1; transform:translateX(0);} }
+@keyframes fadeTop { from {opacity:0; transform:translateY(-40px);} to {opacity:1; transform:translateY(0);} }
+@keyframes fadeBottom { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
+
+/* ===================================
+   IMAGE RESPONSIVENESS
+=================================== */
+.about-image img,
+.expert-card img,
+.award-card img,
+.why-card img,
+.insta-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===================================
+   MEDIA QUERIES
+=================================== */
+@media (max-width:639px) {
+  .about-split { flex-direction: column; }
+  .about-image, .about-text { width:100%; margin-bottom:20px; }
+  .experts-grid, .why-grid, .awards-grid { grid-template-columns: 1fr; }
+  .whatsapp-section { flex-direction: column; }
+}
+
+@media (min-width:640px) and (max-width:1024px) {
+  .about-split { flex-direction: column; }
+  .experts-grid, .why-grid, .awards-grid { grid-template-columns: repeat(2,1fr); }
+  .whatsapp-section { flex-direction: column; }
+}
+
+@media (min-width:1024px) {
+  .about-split { display:flex; align-items:center; }
+  .experts-grid, .why-grid, .awards-grid { grid-template-columns: repeat(3,1fr); }
+}
+
+
+
+/* ===================================
+   ULTRA LUXURY SHIMMER EFFECT
+=================================== */
+
+/* Add a pseudo-element shimmer to each section */
+.about-page section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: rotate(25deg) translateX(-100%);
+  pointer-events: none;
+  animation: shimmerMove 4s infinite;
+  z-index: 1;
+}
+
+@keyframes shimmerMove {
+  0% { transform: rotate(25deg) translateX(-100%); }
+  50% { transform: rotate(25deg) translateX(100%); }
+  100% { transform: rotate(25deg) translateX(-100%); }
+}
+
+/* Ensure content stays above shimmer */
+.about-page section * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===================================
+   PREMIUM HOVER & TEXT GLOW
+=================================== */
+
+/* Text glow for headings */
+.about-page section h2, 
+.about-page section h3 {
+  text-shadow: 0 0 12px rgba(255,255,255,0.3);
+  transition: all 0.5s ease;
+}
+
+.about-page section h2:hover, 
+.about-page section h3:hover {
+  text-shadow: 0 0 20px rgba(255,255,255,0.6);
+  transform: translateY(-4px);
+}
+
+/* Card hover glow overlay */
+.expert-card:hover::after,
+.award-card:hover::after,
+.why-card:hover::after {
+  content: "";
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  pointer-events:none;
+  box-shadow: 0 0 25px rgba(255,255,255,0.25) inset;
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 15px rgba(255,255,255,0.15) inset; }
+  100% { box-shadow: 0 0 25px rgba(255,255,255,0.25) inset; }
+}
+
+/* ===================================
+   MEDIA QUERIES (Shimmer Adaptation)
+=================================== */
+@media (max-width: 639px) {
+  .about-page section::before {
+    animation: shimmerMove 6s infinite;
+  }
+}
+
+@media (min-width: 640px) and (max-width:1024px) {
+  .about-page section::before {
+    animation: shimmerMove 5s infinite;
+  }
+}
+
+@media (min-width:1024px) {
+  .about-page section::before {
+    animation: shimmerMove 4s infinite;
+  }
+}
+
+
+/* ================= INSTAGRAM CARDS ================= */
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.insta-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    cursor: pointer;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+}
+
+.insta-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.insta-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+}
+
+.insta-card::after {
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(255,255,255,0.04);
+    pointer-events:none;
+    box-shadow: 0 0 25px rgba(255,255,255,0.15) inset;
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+
+.insta-card:hover::after {
+    box-shadow: 0 0 35px rgba(255,255,255,0.25) inset;
+}
+
+/* ================= WHATSAPP SECTION ================= */
+.whatsapp-section {
+    padding: 80px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #c2185b, #7b1fa2);
+}
+
+.whatsapp-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.whatsapp-icon .join-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: all 0.4s ease;
+}
+
+.whatsapp-icon .join-btn:hover {
+    background: #1ebe5d;
+    transform: translateY(-6px) scale(1.05);
+}
+
+.whatsapp-img {
+    width: 32px;
+    height: 32px;
+}
+
+/* WhatsApp text */
+.whatsapp-text h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 12px rgba(255,255,255,0.3);
+    transition: all 0.5s ease;
+}
+
+.whatsapp-text h2:hover {
+    text-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+
+.whatsapp-text p {
+    color: #fefefe;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* ===================================
+   SCROLL ANIMATION FOR SECTIONS
+=================================== */
+.fade-left { opacity: 0; transform: translateX(-40px); transition: all 0.8s ease; }
+.fade-right { opacity: 0; transform: translateX(40px); transition: all 0.8s ease; }
+.fade-top { opacity: 0; transform: translateY(-40px); transition: all 0.8s ease; }
+.fade-bottom { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+
+.show.fade-left,
+.show.fade-right,
+.show.fade-top,
+.show.fade-bottom {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Mobile < 640px */
+@media (max-width: 639px) {
+    .insta-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .whatsapp-section {
+        padding: 50px 20px;
+    }
+
+    .whatsapp-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .whatsapp-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .whatsapp-text p {
+        max-width: 100%;
+    }
+}
+
+/* Tablet 640px - 1024px */
+@media (min-width: 640px) and (max-width: 1024px) {
+    .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .whatsapp-section {
+        padding: 70px 40px;
+    }
+
+    .whatsapp-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+/* Desktop 1024px - 1280px */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .insta-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .whatsapp-section {
+        padding: 80px 50px;
+    }
+
+    .whatsapp-text h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Large > 1280px */
+@media (min-width: 1281px) {
+    .insta-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .whatsapp-section {
+        padding: 100px 60px;
+    }
+}
+
+
+
+/* ================= OUR STORY SPLIT SECTION ================= */
+
+/* Base layout: image left, text right */
+.about-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 60px;
+    flex-wrap: wrap;
+    transition: all 0.6s ease;
+}
+
+/* Image container */
+.about-split .about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.about-split .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.about-split .about-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Text container */
+.about-split .about-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 700px;
+}
+
+.about-split .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.about-split .about-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #3a2c40; /* Light mode text */
+    transition: color 0.4s ease;
+}
+
+/* ================= DARK MODE ================= */
+body.dark-mode.about-page .about-split {
+    background: #1a1028; /* optional soft dark bg */
+}
+
+body.dark-mode.about-page .about-split .about-text h2 {
+    color: #bb86fc;
+}
+
+body.dark-mode.about-page .about-split .about-text p {
+    color: #d1c4e9;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Mobile < 640px */
+@media (max-width: 639px) {
+    .about-split {
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 25px;
+    }
+
+    .about-split .about-text h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .about-split .about-text p {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+}
+
+/* Tablet 640px - 1024px */
+@media (min-width: 640px) and (max-width: 1024px) {
+    .about-split {
+        flex-direction: column;
+        padding: 70px 40px;
+        gap: 35px;
+    }
+
+    .about-split .about-text h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .about-split .about-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+/* Desktop 1024px - 1280px */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .about-split {
+        flex-direction: row;
+        padding: 80px 50px;
+        gap: 50px;
+    }
+
+    .about-split .about-text h2 {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .about-split .about-text p {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
+
+/* Large > 1280px */
+@media (min-width: 1281px) {
+    .about-split {
+        flex-direction: row;
+        padding: 100px 60px;
+        gap: 60px;
+    }
+
+    .about-split .about-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-split .about-text p {
+        font-size: 1.05rem;
+    }
+}
+
+/* ================= TRANSITIONS ================= */
+.about-split .about-image,
+.about-split .about-text {
+    transition: all 0.6s ease;
+}
+
+/* Fade-in animations */
+.about-split.fade-left,
+.about-split.fade-right,
+.about-split.fade-top,
+.about-split.fade-bottom {
+    opacity: 0;
+    transform: translateX(-40px) translateY(0);
+}
+
+.about-split.show.fade-left,
+.about-split.show.fade-right,
+.about-split.show.fade-top,
+.about-split.show.fade-bottom {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+
+
+
+
+/* ================= ABOUT PAGE DARK MODE SECTIONS ================= */
+
+/* LIGHT MODE BASE COLORS (optional override for clarity) */
+body.about-page .about-split,
+body.about-page .experts,
+body.about-page .why,
+body.about-page .awards {
+    transition: background 0.6s ease, color 0.4s ease;
+}
+
+/* ================= DARK MODE COLORS ================= */
+body.dark-mode.about-page .about-split {
+    background: #1a1028; /* dark purple background */
+}
+
+body.dark-mode.about-page .experts {
+    background: #141b3a; /* deep navy */
+}
+
+body.dark-mode.about-page .why {
+    background: #21143b; /* deep purple */
+}
+
+body.dark-mode.about-page .awards {
+    background: #101a35; /* dark blue */
+}
+
+/* TEXT COLOR ADJUSTMENTS FOR DARK MODE */
+body.dark-mode.about-page .about-split h2,
+body.dark-mode.about-page .experts h2,
+body.dark-mode.about-page .why h2,
+body.dark-mode.about-page .awards h2 {
+    color: #bb86fc; /* soft violet for headings */
+    transition: color 0.4s ease;
+}
+
+body.dark-mode.about-pag.about-split p,
+body.dark-mode.about-page .experts p,
+body.dark-mode.about-page .why p,
+body.dark-mode.about-page .awards p  {
+    color: #d1c4e9; /* lighter text */
+    transition: color 0.4s ease;
+}
+
+/* ================= TRANSITIONS & FADE ANIMATIONS ================= */
+
+/* Fade-in base state */
+.about-split.fade-left, .about-split.fade-right,
+.about-split.fade-top, .about-split.fade-bottom,
+.expert-card.fade-left, .expert-card.fade-right, .expert-card.fade-top, .expert-card.fade-bottom,
+.why-card.fade-left, .why-card.fade-right, .why-card.fade-top, .why-card.fade-bottom,
+.award-card.fade-left, .award-card.fade-right, .award-card.fade-top, .award-card.fade-bottom {
+    opacity: 0;
+    transform: translateX(-40px) translateY(0);
+}
+
+/* Show state */
+.about-split.show.fade-left, .about-split.show.fade-right,
+.about-split.show.fade-top, .about-split.show.fade-bottom,
+.expert-card.show.fade-left, .expert-card.show.fade-right, .expert-card.show.fade-top, .expert-card.show.fade-bottom,
+.why-card.show.fade-left, .why-card.show.fade-right, .why-card.show.fade-top, .why-card.show.fade-bottom,
+.award-card.show.fade-left, .award-card.show.fade-right, .award-card.show.fade-top, .award-card.show.fade-bottom {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+    transition: all 0.8s ease-out;
+}
+
+/* IMAGE & CARD HOVER EFFECTS */
+.expert-card:hover img,
+.award-card:hover img,
+.why-card:hover img {
+    transform: scale(1.07);
+    filter: brightness(1.08);
+    transition: all 0.5s ease;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Mobile < 640px */
+@media (max-width: 639px) {
+    .about-split,
+    .experts .experts-grid,
+    .why .why-grid,
+    .awards .awards-grid {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .about-split .about-text,
+    .experts .expert-card,
+    .why .why-card,
+    .awards .award-card {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Tablet 640px - 1024px */
+@media (min-width: 640px) and (max-width: 1024px) {
+    .about-split,
+    .experts .experts-grid,
+    .why .why-grid,
+    .awards .awards-grid {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .about-split .about-text,
+    .experts .expert-card,
+    .why .why-card,
+    .awards .award-card {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Desktop 1024px - 1280px */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .about-split,
+    .experts .experts-grid,
+    .why .why-grid,
+    .awards .awards-grid {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .about-split .about-text,
+    .experts .expert-card,
+    .why .why-card,
+    .awards .award-card {
+        width: auto;
+        text-align: left;
+    }
+}
+
+/* Large > 1280px */
+@media (min-width: 1281px) {
+    .about-split,
+    .experts .experts-grid,
+    .why .why-grid,
+    .awards .awards-grid {
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    .about-split .about-text,
+    .experts .expert-card,
+    .why .why-card,
+    .awards .award-card {
+        width: auto;
+        text-align: left;
+    }
+}
+
+
+
+/* ================= DARK MODE SECTIONS ADD-ON ================= */
+bo.dark-mode.about-page .about-split {
+    background: #1a1028; /* dark purple for Our Story */
+}
+
+body.dark-mode.about-page .experts {
+    background: #141b3a; /* deep navy for Experts */
+}
+
+body.dark-mode.about-page .why {
+    background: #21143b; /* dark violet for Why Choose Glow */
+}
+
+/* Optional: text color for readability in dark mode */
+body.dark-mode.about-page .about-split h2,
+body.dark-mode.about-page .experts h2,
+body.dark-mode.about-page .why h2 {
+    color: #bb86fc; /* soft violet headings */
+}
+
+body.dark-mode.about-page .about-split p,
+body.dark-mode.about-page .experts p,
+body.dark-mode.about-page .why p {
+    color: #d1c4e9; /* lighter text */
+}
+
+/* Smooth transition for dark mode switch */
+body.dark-mode.about-page .about-split,
+body.dark-mode.about-page .experts,
+body.dark-mode.about-page .why {
+    transition: background 0.6s ease, color 0.4s ease;
+}
+
+
+
+/* ================= DARK MODE SECTIONS – ADD-ON ================= */
+body.dark-mode.about-page .about-split {
+    background: #1a1028; /* dark purple for Our Story */
+}
+
+body.dark-mode.about-page .experts {
+    background: #141b3a; /* deep navy for Experts */
+}
+
+body.dark-mode.about-page .why {
+    background: #21143b; /* dark violet for Why Choose Glow */
+}
+
+/* Text color for dark mode */
+body.dark-mode.about-page .about-split h2,
+body.dark-mode.about-page .experts h2,
+body.dark-mode.about-page .why h2 {
+    color: #bb86fc; /* soft violet headings */
+}
+
+body.dark-mode.about-page .about-split p,
+body.dark-mode.about-page .experts p,
+body.dark-mode.about-page .why p {
+    color: #d1c4e9; /* lighter paragraph text */
+}
+
+/* Smooth transition for theme change */
+body.dark-mode.about-page .about-split,
+body.dark-mode.about-page .experts,
+body.dark-mode.about-page .why {
+    transition: background 0.6s ease, color 0.4s ease;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Mobile < 640px */
+@media (max-width: 639px) {
+    body.dark-mode.about-page .about-split,
+    body.dark-mode.about-page .experts,
+    body.dark-mode.about-page .why {
+        padding: 30px 15px;
+    }
+
+    body.dark-mode.about-page .about-split .about-text,
+    body.dark-mode.about-page .experts .experts-grid,
+    body.dark-mode.about-page .why .why-grid {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Tablet 640px - 1024px */
+@media (min-width: 640px) and (max-width: 1024px) {
+    body.dark-mode.about-page .about-split,
+    body.dark-mode.about-page .experts,
+    body.dark-mode.about-page .why {
+        padding: 40px 25px;
+    }
+
+    body.dark-mode.about-page .about-split .about-text,
+    body.dark-mode.about-page .experts .experts-grid,
+    body.dark-mode.about-page .why .why-grid {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Desktop 1024px - 1280px */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    body.dark-mode.about-page .about-split,
+    body.dark-mode.about-page .experts,
+    body.dark-mode.about-page .why {
+        padding: 50px 40px;
+    }
+
+    body.dark-mode.about-page .about-split .about-text,
+    body.dark-mode.about-page .experts .experts-grid,
+    body.dark-mode.about-page .why .why-grid {
+        width: auto;
+        text-align: left;
+    }
+}
+
+/* Large > 1280px */
+@media (min-width: 1281px) {
+    body.dark-mode.about-page .about-split,
+    body.dark-mode.about-page .experts,
+    body.dark-mode.about-page .why {
+        padding: 60px 60px;
+    }
+
+    body.dark-mode.about-page .about-split .about-text,
+    body.dark-mode.about-page .experts .experts-grid,
+    body.dark-mode.about-page .why .why-grid {
+        width: auto;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+  position: relative;
+  padding: 80px 60px 30px;
+  background: linear-gradient(
+    135deg,
+    #140b2d,
+    #0f172a,
+    #1b103d,
+    #0f172a
+  );
+  background-size: 300% 300%;
+  animation: footerGradientMove 12s ease infinite;
+  color: #fff;
+  overflow: hidden;
+}
+@keyframes footerGradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animated Glow Background */
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #ff00cc55, transparent 60%);
+  animation: floatFooter 10s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+.footer::before {
+  top: -150px;
+  left: -150px;
+}
+
+.footer::after {
+  bottom: -150px;
+  right: -150px;
+  background: radial-gradient(circle, #3333ff55, transparent 60%);
+}
+
+@keyframes floatFooter {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(80px,60px); }
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+/* Footer Columns */
+.footer-col h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Hover animation */
+.footer-col ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  transition: 0.4s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-col ul li a:hover::after {
+  width: 100%;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Mobile < 640px */
+@media (max-width: 640px) {
+  .footer {
+    padding: 60px 20px 30px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Tablet 640px - 1024px */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop 1024px - 1280px */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large > 1280px */
+@media (min-width: 1280px) {
+  .footer-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+
+/* ================= ULTRA LUXURY FOOTER ADD-ONS ================= */
+
+/* Smooth fade-in animation when page loads */
+.footer {
+  animation: footerFadeIn 1.2s ease forwards;
+
+  
+}
+
+@keyframes footerFadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Subtle animated background movement */
+.footer {
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glass glow card effect per column */
+.footer-col {
+  padding: 10px;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+.footer-col:hover {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* Luxury glowing heading underline */
+.footer-col h3 {
+  position: relative;
+}
+
+.footer-col h3::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  left: 0;
+  bottom: -8px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+
+.footer-col:hover h3::after {
+  width: 70px;
+}
+
+/* Links slight floating animation */
+.footer-col ul li {
+  transition: 0.3s ease;
+}
+
+.footer-col ul li:hover {
+  transform: translateX(6px);
+}
+
+/* Soft glowing border around entire footer */
+.footer {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 -10px 50px rgba(255, 0, 204, 0.1);
+}
+
+/* Bottom copyright glow effect */
+.footer-bottom {
+  transition: 0.4s ease;
+}
+
+.footer-bottom:hover {
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+.footer-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* SOCIAL ICONS */
+
+.footer-social{
+  display:flex;
+  gap:15px;
+}
+
+.footer-social a{
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  color:#ccc;
+  font-size:14px;
+  transition:all 0.35s ease;
+  text-decoration: none;
+}
+
+.footer-social a:hover{
+  transform:translateY(-4px) scale(1.1);
+  background:linear-gradient(45deg,#ff00cc,#3333ff);
+  color:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  
+}
+
+/* COPY CENTER */
+
+.footer-copy{
+  text-align:center;
+  flex:1;
+}
+
+/* LEGAL LINKS */
+
+.footer-legal{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:14px;
+}
+
+.footer-legal a{
+  color:#aaa;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.footer-legal a:hover{
+  color:#fff;
+}
+
+
+
+@media (max-width:640px){
+
+.footer-bottom{
+  flex-direction:column;
+  text-align:center;
+  gap:15px;
+}
+
+.footer-social{
+  order:1;
+}
+
+.footer-copy{
+  order:2;
+}
+
+.footer-legal{
+  order:3;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+}
+
+
+@media (min-width:640px) and (max-width:1024px){
+
+.footer-bottom{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "social legal"
+    "copy copy";
+  align-items:center;
+  gap:15px;
+}
+
+.footer-social{
+  grid-area:social;
+  justify-content:flex-start;
+}
+
+.footer-legal{
+  grid-area:legal;
+  justify-content:flex-end;
+}
+
+.footer-copy{
+  grid-area:copy;
+  text-align:center;
+}
+
+}
+
