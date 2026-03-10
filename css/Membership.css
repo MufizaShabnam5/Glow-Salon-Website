@@ -57,7 +57,7 @@ body.dark {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background-image: url('images/expert1.webp');
+  background-image: url("/images/expert1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
